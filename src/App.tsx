@@ -40,7 +40,7 @@ export default memo(function App() {
                 return (
                     <>
                         <Default inputVal="home" color={Color.SECONDARY} />
-                        <Home />
+                        <Home style={{ marginTop: Spacing.MD }} />
                     </>
                 );
             case 'help':
