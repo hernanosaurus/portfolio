@@ -10,12 +10,12 @@ export default memo(function Projects() {
 
             <div style={{ margin: Spacing.MD }}>
                 <Typography variant="BODY1" color={Color.CONTRAST}>
-                    Task Management Tool - Sparkle:&nbsp;
+                    Task Management Tool:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
-                        Sparkle is a business unit of Madgicx that provides services for creating ads creatives for
-                        customers. To better serve our customers, we have created a system to digitize the workflow,
-                        including requests for creatives, uploading ready ads creatives, and receiving feedback from
-                        customers, etc.
+                        The client is a business that provides services for creating ads creatives for customers. To
+                        better serve their customers, we have created a system to digitize the workflow, including
+                        requests for creatives, uploading ready ads creatives, and receiving feedback from customers,
+                        etc.
                     </span>
                 </Typography>
                 <Typography variant="CAPTION" color={Color.SECONDARY}>
@@ -38,7 +38,7 @@ export default memo(function Projects() {
 
             <div style={{ margin: Spacing.MD }}>
                 <Typography variant="BODY1" color={Color.CONTRAST}>
-                    W3bmint:&nbsp;
+                    NFT Generator:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         a platform for brands to launch digital memberships as NFTs with blockchain-backed utility and
                         build web3 communities.
@@ -51,7 +51,7 @@ export default memo(function Projects() {
 
             <div style={{ margin: Spacing.MD }}>
                 <Typography variant="BODY1" color={Color.CONTRAST}>
-                    Beon Shipper:&nbsp;
+                    Unified Transport Management System:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         A single unified platform for logistics businesses that brings transparency, efficiency and
                         control. It helps create visibility into complex network of suppliers and customers in real
@@ -65,7 +65,7 @@ export default memo(function Projects() {
 
             <div style={{ margin: Spacing.MD }}>
                 <Typography variant="BODY1" color={Color.CONTRAST}>
-                    Transpost Management System 3 - TMS 3:&nbsp;
+                    Transport Management System:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         A tool used by the logistics team to manage the transportation of goods from suppliers to
                         customers.
