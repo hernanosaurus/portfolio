@@ -48,6 +48,6 @@ export const FontVariant = {
     },
     CAPTION: {
         fontSize: 10,
-        lineHeight: '1.5rem',
+        lineHeight: '1rem',
     },
 };

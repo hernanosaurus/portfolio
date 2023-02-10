@@ -2,6 +2,7 @@ import { memo } from 'react';
 import Default from '@/sections/Default/Default.command';
 import Typography from '@/components/ui/Typography/Typography.component';
 import { Spacing, Color } from '@/config/theme';
+import { MAIL_TO, RESUME_URL } from '@/config/config';
 
 export default memo(function Contact() {
     return (
@@ -16,13 +17,14 @@ export default memo(function Contact() {
 
                 <Typography variant="BODY1" color={Color.PRIMARY}>
                     type / click&nbsp;
-                    <a
-                        href="mailto:hernanterania@gmail.com"
-                        id="mailto-btn"
-                        style={{ color: Color.TERTIARY, textDecoration: 'underline' }}
-                    >
+                    <a href={MAIL_TO} id="mailto-btn" style={{ color: Color.TERTIARY, textDecoration: 'underline' }}>
                         email
                     </a>
+                    &nbsp;to send me a message, or click&nbsp;
+                    <a href={RESUME_URL} id="mailto-btn" style={{ color: Color.TERTIARY, textDecoration: 'underline' }}>
+                        here
+                    </a>
+                    &nbsp;download my resume.
                 </Typography>
             </div>
         </>
