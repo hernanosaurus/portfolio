@@ -10,12 +10,12 @@ export default memo(function Contact() {
             <Default inputVal="contact" color={Color.SECONDARY} />
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.PRIMARY} style={{ marginBottom: Spacing.SM }}>
+                <Typography variant="BODY1" color={Color.PRIMARY} block style={{ marginBottom: Spacing.SM }}>
                     Feel free to reach out. I'm always open to discussing new projects, creative ideas or opportunities
-                    to be part of your visions.
+                    to be part of something great.
                 </Typography>
 
-                <Typography variant="BODY1" color={Color.PRIMARY}>
+                <Typography variant="BODY1" color={Color.PRIMARY} block>
                     type / click&nbsp;
                     <a href={MAIL_TO} id="mailto-btn" style={{ color: Color.TERTIARY, textDecoration: 'underline' }}>
                         email

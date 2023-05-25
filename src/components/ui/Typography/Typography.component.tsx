@@ -23,6 +23,10 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
      */
     onClick?: () => void;
     /**
+     * Boolean to determine if typography should be blodk
+     */
+    block?: boolean;
+    /**
      * Style of the typography
      */
     style?: CSSProperties;
@@ -35,14 +39,25 @@ export const Typography = memo<TypographyProps>(props => {
         weight = FontWeight.REGULAR,
         color = Color.PRIMARY,
         onClick,
+        block,
         style,
         ...rest
     } = props;
 
     return (
-        <p onClick={onClick} style={{ ...FontVariant[variant], color: color, fontWeight: weight, ...style }} {...rest}>
+        <span
+            onClick={onClick}
+            style={{
+                ...FontVariant[variant],
+                color: color,
+                fontWeight: weight,
+                display: block ? 'block' : 'inline',
+                ...style,
+            }}
+            {...rest}
+        >
             {children}
-        </p>
+        </span>
     );
 });
 

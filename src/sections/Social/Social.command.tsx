@@ -10,7 +10,7 @@ export default memo(function Social() {
             <Default inputVal="social" color={Color.SECONDARY} />
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.PRIMARY}>
+                <Typography variant="BODY1" color={Color.PRIMARY} block>
                     type / click&nbsp;
                     <a
                         style={{ color: Color.TERTIARY, textDecoration: 'underline' }}

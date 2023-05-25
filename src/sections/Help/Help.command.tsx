@@ -9,10 +9,18 @@ export default memo(function Help() {
         <>
             <Default inputVal="help" color={Color.SECONDARY} />
 
+            <Typography variant="BODY1" color={Color.PRIMARY} block style={{ margin: Spacing.MD }}>
+                Here is the list of available&nbsp;
+                <Typography variant="BODY1" color={Color.CONTRAST}>
+                    commands
+                </Typography>
+                :
+            </Typography>
+
             <div style={{ margin: Spacing.MD }}>
                 {(Object.keys(COMMANDS) as (keyof typeof COMMANDS)[]).map((key, index) => {
                     return (
-                        <Typography key={key + index} variant="BODY1" color={Color.PRIMARY}>
+                        <Typography key={key + index} variant="BODY1" color={Color.PRIMARY} block>
                             {COMMANDS[key]}
                         </Typography>
                     );

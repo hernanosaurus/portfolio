@@ -11,7 +11,7 @@ export default memo(function Default({
     color?: Color;
 }) {
     return (
-        <Typography variant="BODY1" color={Color.SECONDARY}>
+        <Typography variant="BODY1" color={Color.SECONDARY} block>
             <Marker color={color}>~</Marker>
             {inputVal}
         </Typography>

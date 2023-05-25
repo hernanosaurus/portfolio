@@ -5,13 +5,13 @@ import { memo } from 'react';
 export default memo(function Home({ style }: { style?: React.CSSProperties }) {
     return (
         <div style={{ marginBottom: Spacing.MD, ...style }}>
-            <Typography variant="H3" color={Color.PRIMARY}>
+            <Typography variant="H3" color={Color.PRIMARY} block>
                 Welcome! I am Hernan, a <span style={{ color: Color.CONTRAST }}>Keyboard for Hire</span>.
             </Typography>
-            <Typography variant="H3" color={Color.PRIMARY}>
+            <Typography variant="H3" color={Color.PRIMARY} block>
                 Type <span style={{ color: Color.CONTRAST }}>help</span> for available commands.
             </Typography>
-            <Typography variant="CAPTION" color={Color.SECONDARY}>
+            <Typography variant="CAPTION" color={Color.SECONDARY} block>
                 Copyright &#169; 2023 Hernan Terania not a Corporation. All rights reserved.
             </Typography>
         </div>

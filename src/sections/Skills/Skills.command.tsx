@@ -9,22 +9,22 @@ export default memo(function Skills() {
             <Default inputVal="skills" color={Color.SECONDARY} />
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     Languages:&nbsp;
-                    <span style={{ color: Color.PRIMARY }}>HTML, Javascript (ES6+), (S)CSS/SASS, Typescript.</span>
+                    <Typography color={Color.PRIMARY}>HTML, Javascript (ES6+), (S)CSS/SASS, Typescript.</Typography>
                 </Typography>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     Libraries and Framework:&nbsp;
-                    <span style={{ color: Color.PRIMARY }}>
+                    <Typography color={Color.PRIMARY}>
                         React, Redux, Angular, Vue, Jquery, GSAP, styled-components, React Bootstrap, Material UI,
                         Bootstrap. 4, Tailwind CSS
-                    </span>
+                    </Typography>
                 </Typography>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     Tools:&nbsp;
-                    <span style={{ color: Color.PRIMARY }}>
+                    <Typography color={Color.PRIMARY}>
                         VS Code, Git, Jira, Trello, Figma, Adobe Photoshop, Adobe Illustrator.
-                    </span>
+                    </Typography>
                 </Typography>
             </div>
         </>

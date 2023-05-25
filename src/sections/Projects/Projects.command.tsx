@@ -9,7 +9,7 @@ export default memo(function Projects() {
             <Default inputVal="projects" color={Color.SECONDARY} />
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     Task Management Tool:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         The client is a business that provides services for creating ads creatives for customers. To
@@ -18,39 +18,39 @@ export default memo(function Projects() {
                         etc.
                     </span>
                 </Typography>
-                <Typography variant="CAPTION" color={Color.SECONDARY}>
+                <Typography variant="CAPTION" color={Color.SECONDARY} block>
                     React, Typescript, Material UI
                 </Typography>
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     AI Copywriter:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         AI Copywriter is an application for generating ad copy using OpenAI's GPT-3 technology. It
                         provides users with preset prompts to generate the desired results.
                     </span>
                 </Typography>
-                <Typography variant="CAPTION" color={Color.SECONDARY}>
+                <Typography variant="CAPTION" color={Color.SECONDARY} block>
                     React, Typescript, Material UI
                 </Typography>
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     NFT Generator:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         a platform for brands to launch digital memberships as NFTs with blockchain-backed utility and
                         build web3 communities.
                     </span>
                 </Typography>
-                <Typography variant="CAPTION" color={Color.SECONDARY}>
+                <Typography variant="CAPTION" color={Color.SECONDARY} block>
                     Vue, Typescript, Nest, Tailwind
                 </Typography>
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     Unified Transport Management System:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         A single unified platform for logistics businesses that brings transparency, efficiency and
@@ -58,20 +58,20 @@ export default memo(function Projects() {
                         time.
                     </span>
                 </Typography>
-                <Typography variant="CAPTION" color={Color.SECONDARY}>
+                <Typography variant="CAPTION" color={Color.SECONDARY} block>
                     Angular, Typescript, Angular Material UI
                 </Typography>
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST}>
+                <Typography variant="BODY1" color={Color.CONTRAST} block>
                     Transport Management System:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         A tool used by the logistics team to manage the transportation of goods from suppliers to
                         customers.
                     </span>
                 </Typography>
-                <Typography variant="CAPTION" color={Color.SECONDARY}>
+                <Typography variant="CAPTION" color={Color.SECONDARY} block>
                     React, Typescript, React Bootstrap
                 </Typography>
             </div>
