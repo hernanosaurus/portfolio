@@ -1,15 +1,12 @@
 import { memo } from 'react';
-import Default from '@/sections/Default/Default.command';
 import Typography from '@/components/ui/Typography/Typography.component';
 import { Spacing, Color } from '@/config/theme';
 
 export default memo(function Projects() {
     return (
         <>
-            <Default inputVal="projects" color={Color.SECONDARY} />
-
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST} block>
+                <Typography color={Color.CONTRAST} block>
                     Task Management Tool:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         The client is a business that provides services for creating ads creatives for customers. To
@@ -24,7 +21,7 @@ export default memo(function Projects() {
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST} block>
+                <Typography color={Color.CONTRAST} block>
                     AI Copywriter:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         AI Copywriter is an application for generating ad copy using OpenAI's GPT-3 technology. It
@@ -37,7 +34,7 @@ export default memo(function Projects() {
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST} block>
+                <Typography color={Color.CONTRAST} block>
                     NFT Generator:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         a platform for brands to launch digital memberships as NFTs with blockchain-backed utility and
@@ -50,7 +47,7 @@ export default memo(function Projects() {
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST} block>
+                <Typography color={Color.CONTRAST} block>
                     Unified Transport Management System:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         A single unified platform for logistics businesses that brings transparency, efficiency and
@@ -64,7 +61,7 @@ export default memo(function Projects() {
             </div>
 
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.CONTRAST} block>
+                <Typography color={Color.CONTRAST} block>
                     Transport Management System:&nbsp;
                     <span style={{ color: Color.PRIMARY }}>
                         A tool used by the logistics team to manage the transportation of goods from suppliers to

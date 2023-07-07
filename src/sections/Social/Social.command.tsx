@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import Default from '@/sections/Default/Default.command';
 import Typography from '@/components/ui/Typography/Typography.component';
 import { GITHUB_URL, LINKEDIN_URL } from '@/config/config';
 import { Spacing, Color } from '@/config/theme';
@@ -7,10 +6,8 @@ import { Spacing, Color } from '@/config/theme';
 export default memo(function Social() {
     return (
         <>
-            <Default inputVal="social" color={Color.SECONDARY} />
-
             <div style={{ margin: Spacing.MD }}>
-                <Typography variant="BODY1" color={Color.PRIMARY} block>
+                <Typography block>
                     type / click&nbsp;
                     <a
                         style={{ color: Color.TERTIARY, textDecoration: 'underline' }}

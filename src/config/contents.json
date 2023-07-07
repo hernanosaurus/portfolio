@@ -1,0 +1,35 @@
+{
+  "iam": [
+    {
+      "name": "admin",
+      "password": "admin",
+      "roles": ["admin"]
+    },
+    {
+      "name": "user",
+      "password": "user",
+      "roles": ["user"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "project1",
+      "description": "project1",
+      "tech-stack": ["java", "python"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Coding",
+      "description": "java"
+    },
+    {
+      "name": "Libraries & Frameworks",
+      "description": "python"
+    },
+    {
+      "name": "Tools",
+      "description": "python"
+    }
+  ]
+}

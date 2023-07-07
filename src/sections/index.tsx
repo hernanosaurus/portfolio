@@ -6,6 +6,7 @@ import Projects from './Projects/Projects.command';
 import Skills from './Skills/Skills.command';
 import Social from './Social/Social.command';
 import Contact from './Contact/Contact.command';
+import Summary from './Summary/Summary.command';
 import NotFound from './NotFound/NotFound.command';
 
-export { Default, Home, Help, About, Projects, Skills, Social, NotFound, Contact };
+export { Default, Home, Help, About, Projects, Skills, Social, Contact, Summary, NotFound };
