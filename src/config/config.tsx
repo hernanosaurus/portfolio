@@ -23,7 +23,7 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/hernan-terania/';
 
 export const SPARKLE_APP = 'https://sparkle.madgicx.com/';
 export const MADGICX_APP = 'https://madgicx.com/';
-export const AI_COPYWRITER_APP = 'https://ai-copywriter.com/';
+export const AI_COPYWRITER_APP = 'https://madgicx.com/products/ai-copywriter';
 export const W3BMINT_APP = 'https://w3bmint.io/';
 
 export const Content = {
