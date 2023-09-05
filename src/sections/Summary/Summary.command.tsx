@@ -2,18 +2,17 @@ import { memo } from 'react';
 import Typography from '@/components/ui/Typography/Typography.component';
 import { Spacing } from '@/config/theme';
 import CommandLine from '@/components/ui/CommandLine/CommandLine.component';
-import { JSONData } from '@/App';
 
-export default memo(function Summary({ data }: { data: JSONData }) {
+export default memo(function Summary({ content }: { content: { [key: string]: { message: React.ReactNode } } }) {
     return (
         <div style={{ margin: Spacing.MD }}>
-            {Object.keys(data).map((key, index) => {
+            {Object.keys(content).map((key, index) => {
                 return (
                     <div key={key + index}>
                         <Typography variant="H3" block style={{ textDecoration: 'underline' }}>
                             {key.toUpperCase()}
                         </Typography>
-                        <CommandLine data={data[key as keyof JSONData]} />
+                        <CommandLine content={content[key].message} />
                     </div>
                 );
             })}

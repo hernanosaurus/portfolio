@@ -1,12 +1,9 @@
 import { memo, useCallback, useRef, useState } from 'react';
-import { GITHUB_URL, LINKEDIN_URL, MAIL_TO } from './config/config';
+import { Content, GITHUB_URL, LINKEDIN_URL, MAIL_TO } from './config/config';
 import { Background, Spacing, Color } from './config/theme';
 import { Default, Help, NotFound, Summary } from './sections';
 import FormInput from './components/FormInput/FormInput.component';
-import data from './config/contents.json';
 import CommandLine from './components/ui/CommandLine/CommandLine.component';
-
-export type JSONData = typeof data;
 
 export type Message = {
     text: string;
@@ -59,7 +56,7 @@ const CLI = (title: string, children: React.ReactNode): React.ReactNode => (
 
 export default memo(function App() {
     /* terminal: Array of React.ReactNode */
-    const [terminal, setTerminal] = useState<React.ReactNode[]>([<CommandLine data={data.home} />]);
+    const [terminal, setTerminal] = useState<React.ReactNode[]>([<CommandLine content={Content['home'].message} />]);
 
     /* cli: String value of input */
     const [command, setCommand] = useState<string>('');
@@ -84,7 +81,7 @@ export default memo(function App() {
             case 'social':
             case 'contact':
             case 'home':
-                return CLI(command, <CommandLine data={data[command]} />);
+                return CLI(command, <CommandLine content={Content[command].message} />);
             case 'help':
                 return CLI('help', <Help />);
             case 'clear':
@@ -95,7 +92,7 @@ export default memo(function App() {
             case 'email':
                 return <Default input={command} color={Color.SECONDARY} />;
             case 'all':
-                return CLI('all', <Summary data={data} />);
+                return CLI('all', <Summary content={Content} />);
             default:
                 return <NotFound input={command} />;
         }
