@@ -1,6 +1,6 @@
 # Terminal style portfolio
 
-<img width="1083" alt="image" src="https://github.com/hernanosaurus/portfolio/assets/124817838/dd89460b-541b-4985-a979-8ef698458c8d">
+<img width="1080" alt="image" src="https://github.com/hernanosaurus/portfolio/assets/124817838/cd999bc4-5df7-42b1-a699-c6b6c0541987">
 <br>
 This is something I built out of fun, A terminal style portfolio using React, Typescript & Vite. Not much else going. Did not overthink built out of curiosity.
 <br>
