@@ -1,8 +1,20 @@
 import { DownloadIcon, ExternalLinkIcon, LinkIcon, MailIcon } from '@/assets/icons';
 import Link from '@/components/ui/Link/Link.component';
 import Typography from '@/components/ui/Typography/Typography.component';
-import { Color } from './theme';
+import { Color, Spacing } from './theme';
 import { Wrapper } from '@/components/ui/Wrapper/Wrapper.component';
+import { Stackable } from '@/components/ui/Stackable/Stackable.component';
+import {
+    AIC_img_1,
+    AIC_img_2,
+    AIC_img_3,
+    Madgicx_img_1,
+    Madgicx_img_2,
+    Madgicx_img_3,
+    Sparkle_img_1,
+    Sparkle_img_2,
+    Sparkle_img_3,
+} from '@/assets';
 
 export enum COMMANDS {
     IAM = 'iam',
@@ -25,6 +37,17 @@ export const SPARKLE_APP = 'https://sparkle.madgicx.com/';
 export const MADGICX_APP = 'https://madgicx.com/';
 export const AI_COPYWRITER_APP = 'https://madgicx.com/products/ai-copywriter';
 export const W3BMINT_APP = 'https://w3bmint.io/';
+
+const style = {
+    Image: {
+        minWidth: 360,
+        maxWidth: '30%',
+        objectFit: 'cover',
+        margin: Spacing.XS,
+        borderRadius: 5,
+        boxSizing: 'border-box',
+    } as React.CSSProperties,
+};
 
 export const Content = {
     home: {
@@ -72,16 +95,19 @@ export const Content = {
                     <Link href={SPARKLE_APP} icon={<ExternalLinkIcon size={10} fill={Color.TERTIARY} />}>
                         Sparkle
                     </Link>
-
                     <Typography block>
-                        The client is a business that provides services for creating ads creatives for customers. To
-                        better serve their customers, we have created a system to digitize the workflow, including
-                        requests for creatives, uploading ready ads creatives, and receiving feedback from customers,
-                        etc.
+                        An app that allows the users to submit detailed requests for ad designs, specifying their brand,
+                        target audience, ad type (e.g., social media, print, digital), and any specific ideas or
+                        preferences.
                     </Typography>
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
                         React, Redux, Typescript, Material UI
                     </Typography>
+                    <Stackable style={{ marginLeft: Spacing.XL }}>
+                        <img src={Sparkle_img_1} alt="Sparkle" style={{ ...style.Image }} />
+                        <img src={Sparkle_img_2} alt="Sparkle" style={{ ...style.Image }} />
+                        <img src={Sparkle_img_3} alt="Sparkle" style={{ ...style.Image }} />
+                    </Stackable>
                 </Wrapper>
                 {/* APP 2 */}
                 <Wrapper direction="column" gap="SM">
@@ -89,12 +115,17 @@ export const Content = {
                         Madgicx
                     </Link>
                     <Typography block>
-                        Build tools to help you optimize the aspects of Facebook advertising that largely affect your ad
-                        ROI, including tracking, automation, targeting, creatives, and analytics.
+                        A tools used to optimize the aspects of Facebook advertising that largely affects ad's ROI,
+                        including tracking, automation, targeting, creatives, and analytics.
                     </Typography>
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
                         React, Redux, Context, Typescript, SCSS/SASS
                     </Typography>
+                    <Stackable style={{ marginLeft: Spacing.XL }}>
+                        <img src={Madgicx_img_1} alt="Madgicx" style={{ ...style.Image }} />
+                        <img src={Madgicx_img_2} alt="Madgicx" style={{ ...style.Image }} />
+                        <img src={Madgicx_img_3} alt="Madgicx" style={{ ...style.Image }} />
+                    </Stackable>
                 </Wrapper>
                 {/* APP 3 */}
                 <Wrapper direction="column" gap="SM">
@@ -108,6 +139,11 @@ export const Content = {
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
                         React, Redux, Typescript, Material UI
                     </Typography>
+                    <Stackable style={{ marginLeft: Spacing.XL }}>
+                        <img src={AIC_img_1} alt="AI Copywriter" style={{ ...style.Image, objectFit: 'contain' }} />
+                        <img src={AIC_img_2} alt="AI Copywriter" style={{ ...style.Image, objectFit: 'contain' }} />
+                        <img src={AIC_img_3} alt="AI Copywriter" style={{ ...style.Image, objectFit: 'contain' }} />
+                    </Stackable>
                 </Wrapper>
                 {/* APP 4 */}
                 <Wrapper direction="column" gap="SM">
@@ -136,7 +172,7 @@ export const Content = {
                 <div>
                     <Typography color={Color.CONTRAST}>Libraries & Frameworks: </Typography>
                     <Typography>
-                        React, Redux, Angular, Vue, Jquery, GSAP, style-components, React Bootstrap, Material UI,
+                        React, Redux, Angular, Vue, Jquery, GSAP, styled-components, React Bootstrap, Material UI,
                         Tailwind CSS
                     </Typography>
                 </div>
