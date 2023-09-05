@@ -128,23 +128,23 @@ export const Content = {
     skills: {
         message: (
             <>
-                <Wrapper gap="SM">
+                <div>
                     <Typography color={Color.CONTRAST}>Coding: </Typography>
                     <Typography>HTML, Javascript (ES6+), (S)CSS/SASS, Typescript</Typography>
-                </Wrapper>
+                </div>
 
-                <Wrapper gap="SM">
+                <div>
                     <Typography color={Color.CONTRAST}>Libraries & Frameworks: </Typography>
                     <Typography>
                         React, Redux, Angular, Vue, Jquery, GSAP, style-components, React Bootstrap, Material UI,
                         Tailwind CSS
                     </Typography>
-                </Wrapper>
+                </div>
 
-                <Wrapper gap="SM">
+                <div>
                     <Typography color={Color.CONTRAST}>Tools: </Typography>
                     <Typography>VS Code, Git, Jira, Trello, Figma, Photoshop, Illustrator</Typography>
-                </Wrapper>
+                </div>
             </>
         ),
     },
