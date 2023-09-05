@@ -1,12 +1,38 @@
 import { memo, useCallback, useRef, useState } from 'react';
 import { GITHUB_URL, LINKEDIN_URL, MAIL_TO } from './config/config';
 import { Background, Spacing, Color } from './config/theme';
-import { Default, Home, Help, Projects, Skills, Social, About, Contact, NotFound, Summary } from './sections';
+import { Default, Help, NotFound, Summary } from './sections';
 import FormInput from './components/FormInput/FormInput.component';
+import data from './config/contents.json';
+import CommandLine from './components/ui/CommandLine/CommandLine.component';
 
-interface Style {
+export type JSONData = typeof data;
+
+export type Message = {
+    text: string;
+    variant?: string;
+    color?: string;
+    spacing?: string;
+    block?: boolean;
+};
+export type Clickthrough = {
+    title: Message;
+    link: string;
+};
+
+export type Data = {
+    title: Message;
+    messages?: Message[];
+    copyright?: Message;
+    tech?: Message[];
+    app?: Clickthrough;
+    mailto?: Clickthrough;
+    resume?: Clickthrough;
+};
+
+type Style = {
     [key: string]: React.CSSProperties;
-}
+};
 
 const style: Style = {
     Root: {
@@ -33,7 +59,7 @@ const CLI = (title: string, children: React.ReactNode): React.ReactNode => (
 
 export default memo(function App() {
     /* terminal: Array of React.ReactNode */
-    const [terminal, setTerminal] = useState<React.ReactNode[]>([<Home />]);
+    const [terminal, setTerminal] = useState<React.ReactNode[]>([<CommandLine data={data.home} />]);
 
     /* cli: String value of input */
     const [command, setCommand] = useState<string>('');
@@ -53,17 +79,12 @@ export default memo(function App() {
     const RenderCLI = useCallback((command?: string) => {
         switch (command) {
             case 'iam':
-                return CLI('iam', <About />);
             case 'projects':
-                return CLI('projects', <Projects />);
             case 'skills':
-                return CLI('skills', <Skills />);
             case 'social':
-                return CLI('social', <Social />);
             case 'contact':
-                return CLI('contact', <Contact />);
             case 'home':
-                return CLI('home', <Home style={{ marginTop: Spacing.MD }} />);
+                return CLI(command, <CommandLine data={data[command]} />);
             case 'help':
                 return CLI('help', <Help />);
             case 'clear':
@@ -74,7 +95,7 @@ export default memo(function App() {
             case 'email':
                 return <Default input={command} color={Color.SECONDARY} />;
             case 'all':
-                return CLI('all', <Summary />);
+                return CLI('all', <Summary data={data} />);
             default:
                 return <NotFound input={command} />;
         }

@@ -1,9 +1,8 @@
-import React, { CSSProperties, memo, useState } from 'react';
+import React, { CSSProperties, memo } from 'react';
 import { FontVariant, FontWeight, Color } from '@/config/theme';
 import Marker from '@/components/ui/Marker/Marker.component';
-import Default from '@/sections/Home/Home.command';
 
-interface TestProps extends React.HTMLAttributes<HTMLInputElement> {
+type FormInputProps = React.HTMLAttributes<HTMLInputElement> & {
     /**
      * Function to submit the form
      */
@@ -36,9 +35,9 @@ interface TestProps extends React.HTMLAttributes<HTMLInputElement> {
      * Style of the typography
      */
     style?: CSSProperties;
-}
+};
 
-export const FormInput = memo<TestProps>(props => {
+export const FormInput = memo<FormInputProps>(props => {
     const {
         submit,
         value,

@@ -29,7 +29,14 @@ export enum FontWeight {
     BOLD = 700,
 }
 
-export const FontVariant = {
+export type FontVariantType = 'H1' | 'H2' | 'H3' | 'BODY1' | 'CAPTION';
+
+export const FontVariant: {
+    [key in FontVariantType]: {
+        fontSize: number;
+        lineHeight: string;
+    };
+} = {
     H1: {
         fontSize: 32,
         lineHeight: '1.5rem',

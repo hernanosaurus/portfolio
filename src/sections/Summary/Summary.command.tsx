@@ -1,31 +1,22 @@
 import { memo } from 'react';
-import { Projects, Skills, Social, About, Contact } from '../index';
 import Typography from '@/components/ui/Typography/Typography.component';
 import { Spacing } from '@/config/theme';
+import CommandLine from '@/components/ui/CommandLine/CommandLine.component';
+import { JSONData } from '@/App';
 
-export default memo(function Summary() {
+export default memo(function Summary({ data }: { data: JSONData }) {
     return (
         <div style={{ margin: Spacing.MD }}>
-            <Typography variant="H3" block style={{ textDecoration: 'underline' }}>
-                IAM.
-            </Typography>
-            <About />
-            <Typography variant="H3" block style={{ textDecoration: 'underline' }}>
-                PROJECTS.
-            </Typography>
-            <Projects />
-            <Typography variant="H3" block style={{ textDecoration: 'underline' }}>
-                SKILLS.
-            </Typography>
-            <Skills />
-            <Typography variant="H3" block style={{ textDecoration: 'underline' }}>
-                SOCIAL.
-            </Typography>
-            <Social />
-            <Typography variant="H3" block style={{ textDecoration: 'underline' }}>
-                CONTACT.
-            </Typography>
-            <Contact />
+            {Object.keys(data).map((key, index) => {
+                return (
+                    <div key={key + index}>
+                        <Typography variant="H3" block style={{ textDecoration: 'underline' }}>
+                            {key.toUpperCase()}
+                        </Typography>
+                        <CommandLine data={data[key as keyof JSONData]} />
+                    </div>
+                );
+            })}
         </div>
     );
 });

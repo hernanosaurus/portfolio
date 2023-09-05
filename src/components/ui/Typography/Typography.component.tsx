@@ -1,7 +1,7 @@
-import { FontVariant, FontWeight, Color } from '@/config/theme';
+import { FontVariant, FontWeight, Color, FontVariantType } from '@/config/theme';
 import React, { CSSProperties, memo } from 'react';
 
-interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
+type TypographyProps = React.HTMLAttributes<HTMLParagraphElement> & {
     /**
      * Content of the typography
      */
@@ -9,7 +9,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
     /**
      * Variant of the typography
      */
-    variant?: keyof typeof FontVariant;
+    variant?: string;
     /**
      * Weight of the typography
      */
@@ -30,7 +30,7 @@ interface TypographyProps extends React.HTMLAttributes<HTMLParagraphElement> {
      * Style of the typography
      */
     style?: CSSProperties;
-}
+};
 
 export const Typography = memo<TypographyProps>(props => {
     const {
@@ -48,7 +48,7 @@ export const Typography = memo<TypographyProps>(props => {
         <span
             onClick={onClick}
             style={{
-                ...FontVariant[variant],
+                ...FontVariant[variant as FontVariantType],
                 color: color,
                 fontWeight: weight,
                 display: block ? 'block' : 'inline',
