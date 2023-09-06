@@ -5,7 +5,7 @@ import CommandLine from '@/components/ui/CommandLine/CommandLine.component';
 
 export default memo(function Summary({ content }: { content: { [key: string]: { message: React.ReactNode } } }) {
     return (
-        <div style={{ margin: Spacing.MD }}>
+        <div style={{ margin: `${Spacing.MD}px 0` }}>
             {Object.keys(content).map((key, index) => {
                 return (
                     <div key={key + index}>
