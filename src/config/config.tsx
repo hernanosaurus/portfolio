@@ -103,7 +103,7 @@ export const Content = {
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
                         React, Redux, Typescript, Material UI
                     </Typography>
-                    <Stackable style={{ marginLeft: Spacing.XL }}>
+                    <Stackable>
                         <img src={Sparkle_img_1} alt="Sparkle" style={{ ...style.Image }} />
                         <img src={Sparkle_img_2} alt="Sparkle" style={{ ...style.Image }} />
                         <img src={Sparkle_img_3} alt="Sparkle" style={{ ...style.Image }} />
@@ -121,7 +121,7 @@ export const Content = {
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
                         React, Redux, Context, Typescript, SCSS/SASS
                     </Typography>
-                    <Stackable style={{ marginLeft: Spacing.XL }}>
+                    <Stackable>
                         <img src={Madgicx_img_1} alt="Madgicx" style={{ ...style.Image }} />
                         <img src={Madgicx_img_2} alt="Madgicx" style={{ ...style.Image }} />
                         <img src={Madgicx_img_3} alt="Madgicx" style={{ ...style.Image }} />
@@ -139,7 +139,7 @@ export const Content = {
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
                         React, Redux, Typescript, Material UI
                     </Typography>
-                    <Stackable style={{ marginLeft: Spacing.XL }}>
+                    <Stackable>
                         <img src={AIC_img_1} alt="AI Copywriter" style={{ ...style.Image, objectFit: 'contain' }} />
                         <img src={AIC_img_2} alt="AI Copywriter" style={{ ...style.Image, objectFit: 'contain' }} />
                         <img src={AIC_img_3} alt="AI Copywriter" style={{ ...style.Image, objectFit: 'contain' }} />
