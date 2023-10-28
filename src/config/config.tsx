@@ -14,6 +14,9 @@ import {
     Sparkle_img_1,
     Sparkle_img_2,
     Sparkle_img_3,
+    Webmint_img_1,
+    Webmint_img_2,
+    Webmint_img_3,
 } from '@/assets';
 
 export enum COMMANDS {
@@ -90,6 +93,10 @@ export const Content = {
     projects: {
         message: (
             <Wrapper direction="column" gap="SM">
+                <Typography block>
+                    Here is a list of some of the most recent <span style={{ color: Color.CONTRAST }}>projects</span> I
+                    have worked on.
+                </Typography>
                 {/* APP 1 */}
                 <Wrapper direction="column" gap="SM">
                     <Link href={SPARKLE_APP} icon={<ExternalLinkIcon size={10} fill={Color.TERTIARY} />}>
@@ -115,7 +122,7 @@ export const Content = {
                         Madgicx
                     </Link>
                     <Typography block>
-                        A tools used to optimize the aspects of Facebook advertising that largely affects ad's ROI,
+                        A tools used to optimize the aspects of Digital advertising that largely affects ad's ROI,
                         including tracking, automation, targeting, creatives, and analytics.
                     </Typography>
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
@@ -155,8 +162,13 @@ export const Content = {
                         build web3 communities.
                     </Typography>
                     <Typography block variant="CAPTION" color={Color.SECONDARY}>
-                        Vue, Typescript, Tailwind CSS
+                        Vue, Typescript, NestJs, Tailwind CSS
                     </Typography>
+                    <Stackable>
+                        <img src={Webmint_img_1} alt="Webmint" style={{ ...style.Image, objectFit: 'contain' }} />
+                        <img src={Webmint_img_2} alt="Webmint" style={{ ...style.Image, objectFit: 'contain' }} />
+                        <img src={Webmint_img_3} alt="Webmint" style={{ ...style.Image, objectFit: 'contain' }} />
+                    </Stackable>
                 </Wrapper>
             </Wrapper>
         ),
@@ -216,6 +228,7 @@ export const Content = {
                     <Link href={RESUME_URL} icon={<DownloadIcon size={12} fill={Color.TERTIARY} />}>
                         download
                     </Link>
+                    <Typography>my resume.</Typography>
                 </Wrapper>
             </Wrapper>
         ),
